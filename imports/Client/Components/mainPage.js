@@ -69,25 +69,33 @@ export default class App extends Component
                 console.log( "Request Failed: " + err );
             });
 
-        var url = "https://api.qwant.com/api/search/images?count=10&offset=1&q=renault_clio_2005"
-        fetch(url, {method: "GET", headers:{accept:"application/json"}})
-            .then((res)=> {
-                console.log("rest en index");
-                console.log(res);
-                if(res.ok)
-                    return res.json();
 
 
-            })
-            .then((drivers) =>{
-                this.setState({
-                    imagen : drivers
-                })
-            })
-        console.log(this.state.imagen);
+        $.getJSON("https://api.qwant.com/api/search/images", {
+            count: 10,
+            offset: 1,
+            q: "Nissan_Xtrail_2018"
+        }).done(function( json ) {
+
+            this.imagen = json.data.result.items[0].media;
+            console.log(this.imagen)
+
+        })
+            .fail(function( jqxhr, textStatus, error ) {
+                var err = textStatus + ", " + error;
+                console.log( "Request Failed: " + err );
+            });
+
+
+           console.log(this.imagen);
+
+            this.render();
+
+
+
+
+
     }
-
-
 
 
     renderImage()
