@@ -34,12 +34,12 @@ class  Models extends  Component{
         var daticus = JSON.parse(datajson);
         console.log(daticus);
         console.log("Se imprimio daticus");
-        var daata = JSON.parse(daticus);
-        console.log(dataa);
+        //var daata = JSON.parse(daticus);
+       // console.log(dataa);
 
 
         _this.setState({
-         Models: daticus
+            Models: daticus.Models
 
       });
     })

@@ -18,8 +18,8 @@ const Base = "https://api.qwant.com/api/search/images?count=1&offset=1&q=";
     tempo="";
     var URL = ""
     console.log("imprimiendo estado");
-    console.log(this.props.Model.make_display);
-    console.log(this.props.props.anio)
+    console.log(this.props.Model.model_name);
+    console.log(this.props.Model.model_make_id)
 
     tempo = this.props.Model.make_display;
 
