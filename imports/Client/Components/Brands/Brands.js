@@ -3,33 +3,36 @@ import React, {Component} from "react";
 export default class App extends Component
 {
     constructor(props) {
-        super(props);
-        this.state = {
-            nombre: "juan",
-            apellido: "Perez",
-            year:"2017",
-            brands:[]
-
-        var imagen = "";
-
-
+    super(props);
+    this.state = {
+        nombre: "juan",
+        apellido: "Perez",
+        year: "2017",
+        brands: []
     }
 
+
+
+}
     
     componentDidMount() {
 
         var makes = [];
         var ready = false;
-
+        var componente = this; 
         var anio = this.state.year;
         console.log(anio);
-        /**$.getJSON("https://www.carqueryapi.com/api/0.3/" + "?callback=?", {
+        $.getJSON("https://www.carqueryapi.com/api/0.3/" + "?callback=?", {
             cmd: "getMakes",
-            year:{anio}+""
+            year:"2017"
         },)
             .done(function( json ) {
-                console.log(json.Makes);
+                
                 makes = json.Makes;
+                componente.setState(
+                {
+                    brands:makes
+                })
 
 
             }).done(this.setState(
@@ -50,9 +53,9 @@ export default class App extends Component
 
 
 
-        console.log(this.imagen);
+        
 
-        **/
+        
 
 
 
@@ -60,25 +63,7 @@ export default class App extends Component
 
     }
    
-    renderMarcas()
-    {
-        return this.state.brands.map((t)=> {
-            var marca = t.make_display.toString();
-            image = this.buscarLogo(marca);
-            console.log(image);
-
-            return(<div className="col-sm-4 caja">
-                <br/>
-                <img src= {this.state.imagen} alt=""/>
-                <p className="descripcion"> Name: {t.make_display} </p>
-                <p className="descripcion">Nacionality: {t.make_country}</p>
-                <br/>
-
-
-            </div>);
-        });
-    }
-
+    
 
   
     render (){
@@ -111,7 +96,7 @@ export default class App extends Component
                 </section>
                 <h1>Marcas disponibles en {this.state.year}</h1>
                 <div className="row">
-                {this.renderMarcas()}
+                
                 </div>
             </div>
         );
