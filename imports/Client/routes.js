@@ -7,7 +7,7 @@ const browserHistory = createBrowserHistory();
 
 import mainPage from "./Components/mainPage";
 import imagenes from "./Components/items";
-
+import Brands from "./Components/Brands/Index";
 
 export const renderRoutes = () => (
 
@@ -16,6 +16,7 @@ export const renderRoutes = () => (
     <Route exact path="/" component={mainPage}/>
     <Route path="/prueba" component = {mainPage}/>
     <Route path="/imagenes" component = {imagenes}/>
+    <Route path="/brands" component = {Brands}/>
 </div>
 </Router>
 );

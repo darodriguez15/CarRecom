@@ -26,7 +26,10 @@ export default class App extends Component {
 
   render() {
     const renderItems = this.state.items.map(function(item, i) {
-      return <li key={i}>{item.media}</li>
+      return <div>
+      <li key={i}>{item.media}</li>
+      <img src={item.media} alt="" />
+      </div>
     });
 
     return (
