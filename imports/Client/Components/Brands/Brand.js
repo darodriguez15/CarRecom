@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import axios from "axios";
 
 
-const URL = "https://api.qwant.com/api/search/images?count=1&offset=1&q=";
+const Base = "https://api.qwant.com/api/search/images?count=1&offset=1&q=";
 
  class Brand extends Component {
     constructor(props){
@@ -15,12 +15,23 @@ const URL = "https://api.qwant.com/api/search/images?count=1&offset=1&q=";
    
     componentDidMount() {
     var _this = this;
-    URL = URL + this.props.Brand.make_display +"logo";
+    tempo="";
+    var URL = ""
+    console.log("imprimiendo estado");
+    console.log(this.props.Brand.make_display);
+
+    tempo = this.props.Brand.make_display;
+
+    console.log("imprimiendo tempo");
+    console.log(tempo);
+    URL = Base + tempo +"_logo";
+    console.log(URL);
     axios.get(URL)
     .then(function(res){
       _this.setState({
         items: res.data.data.result.items
       });
+      tempo="";
     })
     .catch(function(e) {
       console.log("ERROR2 ", e);
@@ -32,25 +43,26 @@ const URL = "https://api.qwant.com/api/search/images?count=1&offset=1&q=";
         var componente = this;
         const renderItems = this.state.items.map(function(item, i) {
         
-      return <div>
-      <li key={i}>{item.media}</li>
-      <img src={item.media} alt="" />
+        return <div>
+        <center>
+        <img className="BrandImage" src={item.media} alt="" />
+        </center>
       </div>
-    });
+    }); 
 
         return(
             
-            <div>
-            <ul className="App">
+            
+            <div className="col-sm-4">
             {renderItems}
-            </ul>
-            <h2>{this.props.Brand.make_display     }</h2>
-            <p>{this.props.Brand.make_country}</p>
+            <h4 className="descripcion">Brand Name: {this.props.Brand.make_display     }</h4>
+            <h5 className="descripcion">Country: {this.props.Brand.make_country}    </h5>
             
                 <br/>
             </div>
+            
 
-        );
+        ); 
     }
 }
 Brand.PropTypes = {

@@ -1,1 +1,36 @@
 /* CSS declarations go here */
+.BrandImage
+{
+	height: 200px;
+	width: 200px;
+	vertical-align:middle;
+
+}
+.elPapadeTodos
+{
+	justify-content:center
+}
+.descripcion
+{
+	text-align:center;	
+}
+.col-sm-4
+{
+	border-color: black;
+}
+.titu{
+	text-align: center;
+}
+input[type=text], select {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 50px 8px 50px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#myLabel
+{
+	padding-left: 50px;
+}

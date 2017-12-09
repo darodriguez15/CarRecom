@@ -1,10 +1,11 @@
 import React, {Component} from "react";
 
 import  BrandsList from "./BrandsList.js";
+import Header from "../Global/header.js"
 
 import axios from "axios";
 
-const URL = "https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getMakes&year=";
+const Base = "https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getMakes&year=";
 
 class  Brands extends  Component{
     
@@ -17,7 +18,12 @@ class  Brands extends  Component{
          }
     componentDidMount() {
     var _this = this;
-    URL = URL + this.state.anio;
+    _this.setState(
+    {
+        Brands:[]
+    })
+    URL="";
+    URL = Base + this.state.anio;
     axios.get(URL)
     .then(function(res){
         var stringSin = res.data;
@@ -36,13 +42,44 @@ class  Brands extends  Component{
       console.log("ERROR2 ", e);
         })
     }
+   
+    handleKeyPress = (event) => {
+        if (event.key === 'Enter') {
 
+            this.setState(
+                {
+                    anio :event.target.value
+                })
+            console.log('enter press here! ');
+            this.componentDidMount();
+            this.render();
+        }
+    
+    }
     render(){
         return(
             <div className=" Brands">
-            <h1> Brands Season 2017</h1>
-                <br/>
+            <Header/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            
+            < h1 className="titu"> Car Brands in  {this.state.anio}   </h1>
+            <br/>
+            <div> 
+             
+            <label id="myLabel">Change Year</label>
+             <input type='text' placeholder='Change Year'
+                       onKeyPress={this.handleKeyPress.bind(this)}
+                />
+                </div>
+            <div>  
+                    <br/>
                 < BrandsList  Brands={this.state. Brands}/>
+            </div>
+                
             </div>
         );
     }

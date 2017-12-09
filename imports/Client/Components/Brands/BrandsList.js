@@ -16,7 +16,7 @@ class BrandsList extends Component {
     }
     
     render(){
-        return(<div>
+        return(<div className="elPapadeTodos">
              {this.renderBrands()}
         </div>);
     }
