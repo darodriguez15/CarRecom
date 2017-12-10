@@ -55,7 +55,7 @@ const Base = "https://api.qwant.com/api/search/images?count=1&offset=1&q=";
             
             <div className="col-sm-4">
             {renderItems}
-            <h4 className="descripcion">Brand Name: {this.props.Brand.make_display     }</h4>
+            <h4 className="descripcion">Brand Name: {this.props.Brand.make_display}</h4>
             <h5 className="descripcion">Country: {this.props.Brand.make_country}    </h5>
             
                 <br/>
