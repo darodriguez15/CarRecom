@@ -21,11 +21,13 @@ const Base = "https://api.qwant.com/api/search/images?count=1&offset=1&q=";
     console.log(this.props.Model.model_name);
     console.log(this.props.Model.model_make_id)
 
-    tempo = this.props.Model.make_display;
+    var anio = this.props.anio;
+    console.log(anio);
+    tempo = this.props.Model.model_make_id +"_"+this.props.Model.model_name;
 
     console.log("imprimiendo tempo");
     console.log(tempo);
-    URL = Base + tempo +"_logo";
+    URL = Base + tempo+"_"+anio;
     console.log(URL);
     axios.get(URL)
     .then(function(res){
@@ -56,8 +58,8 @@ const Base = "https://api.qwant.com/api/search/images?count=1&offset=1&q=";
             
             <div className="col-sm-4">
             {renderItems}
-            <h4 className="descripcion">Model Name: {this.props.Model.make_display     }</h4>
-            <h5 className="descripcion">Country: {this.props.Model.make_country}    </h5>
+            <h4 className="descripcion">Brand: {this.props.Model.model_make_id}</h4>
+            <h5 className="descripcion">Model: {this.props.Model.model_name}    </h5>
             
                 <br/>
             </div>

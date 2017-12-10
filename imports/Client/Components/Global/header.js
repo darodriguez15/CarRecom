@@ -21,7 +21,7 @@ export default class App extends Component
                                 <li><a href="/brands">Brands</a></li>
                             </ul>
                             <ul className="nav navbar-nav navbar-right">
-                                <li><a href="/profiles">Models</a></li>
+                                <li><a href="/models">Models</a></li>
                             </ul>
                             <ul className="nav navbar-nav navbar-right">
                                 <li><a href="/profiles">Specs</a></li>

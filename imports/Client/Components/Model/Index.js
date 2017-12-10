@@ -13,7 +13,7 @@ class  Models extends  Component{
         super(props);
             this.state={
                  anio:2017,
-                 marca:"audi",
+                 marca:"Audi",
                  Models:[]
              };
          }
@@ -61,6 +61,19 @@ class  Models extends  Component{
         }
     
     }
+     handleKeyPress2 = (event) => {
+        if (event.key === 'Enter') {
+
+            this.setState(
+                {
+                    marca :event.target.value
+                })
+            console.log('enter press here! ');
+            this.componentDidMount();
+            this.render();
+        }
+    
+    }
     render(){
         return(
             <div className=" Models">
@@ -80,9 +93,17 @@ class  Models extends  Component{
                        onKeyPress={this.handleKeyPress.bind(this)}
                 />
                 </div>
+
+             <div> 
+             
+            <label id="myLabel">Change Brand</label>
+             <input type='text' placeholder='Change Brand'
+                       onKeyPress={this.handleKeyPress2.bind(this)}
+                />
+                </div>   
             <div>  
                     <br/>
-                < ModelsList  Models={this.state.Models}/>
+                < ModelsList  Models={this.state.Models} anio={this.state.anio}/>
             </div>
                 
             </div>
