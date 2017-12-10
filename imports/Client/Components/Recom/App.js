@@ -6,7 +6,7 @@ import Recom from './Recom';
 import { Meteor } from 'meteor/meteor';
 import { Recoms } from "../../../api/recoms";
 import AccountsUIWrapper from './AccountsUIWrapper.jsx';
-
+import Header from "../Global/header.js";
 // App component - represents the whole app
 class App extends Component {
 
@@ -119,6 +119,7 @@ class App extends Component {
         return (
             <div className="container">
                 <br/><br/><br/><br/>
+                <Header/> 
                 <div className="row">
                     <div className="col-sm-10">
                         <h1>List of reviews

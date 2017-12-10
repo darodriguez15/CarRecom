@@ -55,7 +55,7 @@ class Profile extends Component {
                                     <br />
                         </span></p>
 
-                        My reviews:
+                        <h2>My reviews</h2>   
                                     {this.renderTasks()}<br />
                         <br /><br />
                         {(this.props.currentUser && Meteor.user().username === this.props.profile.username) ?

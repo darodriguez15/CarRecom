@@ -30,7 +30,7 @@ export default class App extends Component
                                 <li><a href="/profiles">Profile</a></li>
                             </ul>
                             <ul className="nav navbar-nav navbar-right">
-                                <li><a href="/profiles">Reco</a></li>
+                                <li><a href="/recoms">Reco</a></li>
                             </ul>
                         </div>
 

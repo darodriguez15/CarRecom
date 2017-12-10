@@ -7,7 +7,7 @@ import { Meteor } from 'meteor/meteor';
 import { Recoms } from "../../../api/recoms";
 import { Profiles } from "../../../api/profiles";
 import AccountsUIWrapper from './AccountsUIWrapper.jsx';
-
+import Header from "../Global/header.js";
 // Profile component - represents the whole app
 class ProfileView extends Component {
     constructor(props) {
@@ -71,6 +71,7 @@ class ProfileView extends Component {
 		}
 		return (
             <div className="container">
+                <Header/>  
                 <br/><br/><br/><br/>
                 <div className="row">
                     <div className="col-sm-10">

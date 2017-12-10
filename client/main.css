@@ -43,6 +43,7 @@
 }
 .titu{
 	text-align: center;
+  font-family: fantasy;
 }
 input[type=text], select {
     width: 90%;
@@ -53,7 +54,66 @@ input[type=text], select {
     border-radius: 4px;
     box-sizing: border-box;
 }
+.mainDesc
+{
+  font-size: x-large;
+  text-align: justify;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+.uniandes
+{
+    width: 80%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.imageHomePage
+{
+    width: 100%;
+    height: 500px;
+    vertical-align:middle;
+    margin: auto;
+}
+h1, h2
+{
+    font-family: fantasy;
+}
+.comentario
+{
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+
+}
 #myLabel
 {
 	padding-left: 50px;
+}
+.contenedora
+{
+    border-style: solid;
+}
+.tituloLibro
+{
+    font-style: italic;
+}
+.imagenLibro
+{
+    width: 80%;
+    height: 80%;
+}
+.descLibro
+{
+    font-size: large;
+}
+
+.historia
+{
+    font-size: large;
+    text-align: justify;
+}
+.contenedora
+{
+    border-style: solid;
 }

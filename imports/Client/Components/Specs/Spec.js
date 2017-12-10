@@ -23,7 +23,7 @@ const Base = "https://api.qwant.com/api/search/images?count=1&offset=1&q=";
 
     var anio = this.props.Spec.model_year;
     console.log(anio);
-    tempo = this.props.Spec.model_make_id +"_"+this.props.Spec.model_name;
+    tempo = this.props.Spec.model_make_id +"_"+this.props.Spec.model_name; 
 
     console.log("imprimiendo tempo");
     console.log(tempo);
@@ -92,7 +92,7 @@ const Base = "https://api.qwant.com/api/search/images?count=1&offset=1&q=";
     <td>{this.props.Spec.model_body}</td>
 
   </tr>
-  
+    
   <tr>
 
     <td> Engine(cc) </td>
@@ -137,6 +137,9 @@ const Base = "https://api.qwant.com/api/search/images?count=1&offset=1&q=";
   </tr>
   
 </table>   
+<br/>
+<br/>
+<br/>
             </div>
             
 
