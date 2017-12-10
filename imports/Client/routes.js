@@ -10,6 +10,7 @@ import imagenes from "./Components/items";
 import Brands from "./Components/Brands/Index";
 import Models from "./Components/Model/Index";
 import Specs from "./Components/Specs/Index";
+import Recoms from "./Components/Recom/App";
 
 
 export const renderRoutes = () => (
@@ -20,7 +21,8 @@ export const renderRoutes = () => (
     <Route path="/models" component = {Models}/>
     <Route path="/imagenes" component = {imagenes}/>
     <Route path="/brands" component = {Brands}/>
-    <Route path="/specs" component = {Specs}/>
+    <Route path="/specs" component={Specs} />
+    <Route path="/recoms" component={Recoms} />
 </div>
 </Router>
 );
