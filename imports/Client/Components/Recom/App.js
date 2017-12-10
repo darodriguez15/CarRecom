@@ -121,7 +121,8 @@ class App extends Component {
                 <br/><br/><br/><br/>
                 <div className="row">
                     <div className="col-sm-10">
-                        <h1>Lista de Libros</h1>
+                        <h1>List of reviews
+                            </h1>
                 </div>
                     <div className="col-sm-2"> <br/><br/>
 
@@ -131,35 +132,27 @@ class App extends Component {
                 </div>
 
 
-                <h2>Busquedas</h2>
+                <h2>Search</h2>
                 <br/>
                 <div id="panelBusquedas">
                     <form className="new-task" onSubmit={this.handleChange.bind(this)} ><p>
-                        <label>Buscar libro por nombre</label>
+                        <label>Recommendation by brand</label>
                         <input
-                            aria-label = "Recomendations searchs"
+                            aria-label = "Recommendations searchs"
                         type="text"
                         ref="textInputo"
-                        placeholder="Recomendations by name" /></p>
-                    </form>
-                    <form className="new-task" onSubmit={this.handleChange5.bind(this)} ><p>
-                        <label>Recomendation by key word</label>
-                        <input
-                            type="text"
-                            ref="clave"
-                            aria-label = "Buscar libro por palabra clave"
-                            placeholder="Recomendation by key word" /></p>
+                        placeholder="Recommendations by brand" /></p>
                     </form>
                     <form className="new-task" onSubmit={this.handleChange2.bind(this)} ><p>
-                        <label>Recomendation by Genre</label>
+                        <label>Recommendation by model</label>
                         <input
                             type="text"
                             ref="genero"
                             aria-label = "Buscar libro por genero"
-                            placeholder="Recomendation by Genre" /></p>
+                            placeholder="Recommendation by Model" /></p>
                     </form>
                     <form className="new-task" onSubmit={this.handleChange3.bind(this)} ><p>
-                        <label>Recomendations by user</label>
+                        <label>Recommendations by user</label>
                         <input
                             type="text"
                             ref="autor"
@@ -167,27 +160,27 @@ class App extends Component {
                             placeholder="Recomendations by user" /></p>
                     </form>
                     <form className="new-task" onSubmit={this.handleChange4.bind(this)} ><p>
-                        <label>Recomendations by brand</label>
+                        <label>Recommendations by year</label>
                         <input
                             type="text"
                             ref="idioma"
                             aria-label = "Buscar libro por idioma"
-                            placeholder="Recomendations by brand" /></p>
+                            placeholder="Recommendations by year" /></p>
                     </form>
                 </div>
 
-                <a className="btn btn-default 	proyectButton	" role="button" id="descrpBotuuno">Ver las opciones de busqueda &raquo;</a><br/><br/><br/><br/>
+                <a className="btn btn-default 	proyectButton	" role="button" id="descrpBotuuno">See browsing options&raquo;</a><br/><br/><br/><br/>
 
 
             {this.props.currentUser ?
                   <div>
-                <h3>Agregar Nuevo Libro</h3>
+                <h3>Add new review</h3>
                     <form className="new-task" onSubmit={this.handleSubmit.bind(this)} >
                         <p><input
                             type="text"
                             ref="textInput"
                             aria-label = "Nombre de tu nuevo libro"
-                            placeholder="Escribe el nombre de tu nuevo libro" /></p>
+                            placeholder="Brand of the reviewed car" /></p>
                     </form> </div>: ''
                     }
 
