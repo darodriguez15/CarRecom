@@ -38,7 +38,7 @@ class Profile extends Component {
                                 <input type="text" ref="textInputIm" placeholder="Direccion url de la imagen" aria-label="Direccion url de la imagen" />
                             </form> : ''}
                         <br />
-                        <p className="descLibro" onClick={this.mostrarGenero.bind(this)}>Nombre: {this.props.profile.apellido}</p>
+                        <p className="descLibro" onClick={this.mostrarGenero.bind(this)}>Name: {this.props.profile.apellido}</p>
                         {this.props.currentUser && (this.props.profile.username == this.props.currentUser.username) ?
                             <form className={this.props.profile.mG} onSubmit={this.editarGenre.bind(this)}>
                                 <input type="text" ref="textInputi" placeholder={this.props.profile.genero} aria-label="Nuevo Genero del libro" />
@@ -55,11 +55,11 @@ class Profile extends Component {
                                     <br />
                         </span></p>
 
-                        Mis Libros:
+                        My reviews:
                                     {this.renderTasks()}<br />
                         <br /><br />
                         {(this.props.currentUser && Meteor.user().username === this.props.profile.username) ?
-                            <button className="delete btn" onClick={this.deleteThisTask.bind(this)}> Borrar Perfil</button> : ''}
+                            <button className="delete btn" onClick={this.deleteThisTask.bind(this)}> Delete Profile</button> : ''}
                         <br /><br/>
                     </div>
 

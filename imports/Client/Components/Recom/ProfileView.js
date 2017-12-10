@@ -74,7 +74,7 @@ class ProfileView extends Component {
                 <br/><br/><br/><br/>
                 <div className="row">
                     <div className="col-sm-10">
-                        <h1>Lista de Libros</h1>
+                        <h1>Users</h1>
                 </div>
                     <div className="col-sm-2"> <br/><br/>
 
@@ -84,19 +84,19 @@ class ProfileView extends Component {
                 </div>
 
 
-                <h2>Busquedas</h2>
+                <h2>Searchs</h2>
                 <br/>
                 <div id="panelBusquedas">
                     <form className="new-task" onSubmit={this.handleChange.bind(this)} ><p>
-                        <label>Buscar Usuario</label>
+                        <label>Search user</label>
                         <input
-							aria-label = "Buscar Usuario"
+							aria-label = "Search user"
 							type="text"
 							ref="textInputo"
-							placeholder="Username de Usuario" /></p>
+							placeholder="Username" /></p>
 			</form>
                 </div>
-                <button className="btn" onClick={this.limpiarBusqueda.bind(this)} type="button">Limpiar busqueda</button>
+                <button className="btn" onClick={this.limpiarBusqueda.bind(this)} type="button">Clean search</button>
 
 
 

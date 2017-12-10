@@ -73,7 +73,7 @@ class Recom extends Component {
                         <br/><br/>
                         <br/><br/>
                       
-                        <strong>Comentarios</strong>
+                        <strong>Comments</strong>
 
                         <p className="comentario">{this.props.recom.comments}</p>
                         {this.props.currentUser ?
@@ -82,7 +82,7 @@ class Recom extends Component {
                             </form> : ''}
                         <br/>
                         {(this.props.currentUser && Meteor.user().username === this.props.recom.username) ?
-                            <button className="delete btn" onClick={this.deleteThisTask.bind(this)}> Borrar Libro</button> : ''}
+                            <button className="delete btn" onClick={this.deleteThisTask.bind(this)}> Delete Review</button> : ''}
                         <br/><br/>
 
 
