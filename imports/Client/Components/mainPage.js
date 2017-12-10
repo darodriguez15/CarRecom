@@ -52,7 +52,9 @@ CarRecom is a tool that helps potential buyers of vehicles. CarRecom allows you 
                 <br/>
                 
                 <p className="mainDesc">
-All the information was taken from CarQueryApi and the images were taken from Qwant Api. No copyright infringement intended </p>
+All the information was taken from CarQueryApi and the images were taken from Qwant Api. No copyright infringement intended.
+
+For the correct operation install the following AddOn: <a target="_blank" href="https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi">Add-On</a> </p>
 
                 </div>
                 </div>
