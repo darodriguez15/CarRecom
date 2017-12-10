@@ -11,6 +11,7 @@ import Brands from "./Components/Brands/Index";
 import Models from "./Components/Model/Index";
 import Specs from "./Components/Specs/Index";
 import Recoms from "./Components/Recom/App";
+import Profile from "./Components/Recom/ProfileView";
 
 
 export const renderRoutes = () => (
@@ -23,6 +24,7 @@ export const renderRoutes = () => (
     <Route path="/brands" component = {Brands}/>
     <Route path="/specs" component={Specs} />
     <Route path="/recoms" component={Recoms} />
+    <Route path="/profiles" component={Profile} />
 </div>
 </Router>
 );
