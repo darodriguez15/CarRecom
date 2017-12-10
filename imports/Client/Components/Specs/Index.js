@@ -41,7 +41,7 @@ class  Specs extends  Component{
 
 
         _this.setState({
-            Specs: daticus.Specs
+            Specs: daticus.Trims
 
       });
     })
@@ -76,6 +76,19 @@ class  Specs extends  Component{
         }
     
     }
+    handleKeyPress3 = (event) => {
+        if (event.key === 'Enter') {
+
+            this.setState(
+                {
+                    modelo :event.target.value
+                })
+            console.log('enter press here! ');
+            this.componentDidMount();
+            this.render();
+        }
+    
+    }
     render(){
         return(
             <div className=" Specs">
@@ -86,7 +99,7 @@ class  Specs extends  Component{
             <br/>
             <br/>
             
-            < h1 className="titu"> {this.state.marca} Specs in  {this.state.anio}   </h1>
+            < h1 className="titu"> Specs of {this.state.marca} {this.state.modelo} {this.state.anio}   </h1>
             <br/>
             <div> 
              
@@ -96,14 +109,21 @@ class  Specs extends  Component{
                 />
                 </div>
 
-             <div> 
+             <div>   
              
             <label id="myLabel">Change Brand</label>
              <input type='text' placeholder='Change Brand'
                        onKeyPress={this.handleKeyPress2.bind(this)}
                 />
                 </div>   
-            <div>  
+            <div> 
+
+            <label id="myLabel">Change model</label>
+             <input type='text' placeholder='Change Model'
+                       onKeyPress={this.handleKeyPress3.bind(this)}
+                />
+                </div>   
+            <div>   
                     <br/>
                 < SpecsList  Specs={this.state.Specs} anio={this.state.anio}/>
             </div>

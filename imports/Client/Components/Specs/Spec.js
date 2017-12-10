@@ -21,9 +21,9 @@ const Base = "https://api.qwant.com/api/search/images?count=1&offset=1&q=";
     console.log(this.props.Spec.Spec_name);
     console.log(this.props.Spec.Spec_make_id)
 
-    var anio = this.props.anio;
+    var anio = this.props.Spec.model_year;
     console.log(anio);
-    tempo = this.props.Spec.Spec_make_id +"_"+this.props.Spec.Spec_name;
+    tempo = this.props.Spec.model_make_id +"_"+this.props.Spec.model_name;
 
     console.log("imprimiendo tempo");
     console.log(tempo);
@@ -56,12 +56,87 @@ const Base = "https://api.qwant.com/api/search/images?count=1&offset=1&q=";
         return(
             
             
-            <div className="col-sm-4">
+            <div className="col-sm-6">
             {renderItems}
-            <h4 className="descripcion">Brand: {this.props.Spec.Spec_make_id}</h4>
-            <h5 className="descripcion">Spec: {this.props.Spec.Spec_name}    </h5>
+            
+            <h4 className="descripcion">Brand: {this.props.Spec.model_make_id}</h4>
+            <h5 className="descripcion">Spec: {this.props.Spec.model_name}    </h5>
             
                 <br/>
+
+             <table className="TablaCoqueta">
+
+  <tr>
+
+    <td> Model Trim </td>
+
+    <td> {this.props.Spec.model_trim} </td>
+    
+
+  </tr>
+
+  <tr>
+
+    <td>Model Year</td>
+
+    <td>{this.props.Spec.model_year}</td>
+
+   
+
+  </tr>
+
+  <tr>
+
+    <td>Model Body</td>
+
+    <td>{this.props.Spec.model_body}</td>
+
+  </tr>
+  
+  <tr>
+
+    <td> Engine(cc) </td>
+
+    <td>{this.props.Spec.model_engine_cc}</td>
+
+  </tr>
+  <tr>
+
+    <td> Power(PS) </td>
+
+    <td>{this.props.Spec.model_engine_power_ps}</td>
+
+  </tr>
+  <tr>
+
+    <td> Top Speed (k/h) </td>
+
+    <td>{this.props.Spec.model_top_speed_kph}</td>
+
+  </tr>
+  <tr>
+
+    <td> 0 to 100 (k/h) </td>
+
+    <td>{this.props.Spec.model_0_to_100_kph}</td>
+
+  </tr>
+  <tr>
+
+    <td> Drive </td>
+
+    <td>{this.props.Spec.model_drive}</td>
+
+  </tr>
+  <tr>
+
+    <td> Transmission </td>
+
+    <td>{this.props.Spec.model_transmission_type}</td>
+
+  </tr>
+  
+</table>   
             </div>
             
 
