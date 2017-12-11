@@ -70,7 +70,7 @@ class  Brands extends  Component{
             <br/>
             <div> 
              
-            <label id="myLabel">Change Year</label>
+            <label className="myLabel">Change Year</label>
              <input aria-label="Change Year" type='text' placeholder='Change Year'
                        onKeyPress={this.handleKeyPress.bind(this)}
                 />
