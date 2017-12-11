@@ -103,23 +103,23 @@ class  Specs extends  Component{
             <br/>
             <div> 
              
-            <label id="myLabel">Change Year</label>
-             <input type='text' placeholder='Change Year'
+            <label className="myLabel">Change Year</label>
+             <input aria-label="Change Year" type='text' placeholder='Change Year'
                        onKeyPress={this.handleKeyPress.bind(this)}
                 />
                 </div>
 
              <div>   
              
-            <label id="myLabel">Change Brand</label>
-             <input type='text' placeholder='Change Brand'
+            <label className="myLabel">Change Brand</label>
+             <input aria-label="Change Year" type='text' placeholder='Change Brand'
                        onKeyPress={this.handleKeyPress2.bind(this)}
                 />
                 </div>   
             <div> 
 
-            <label id="myLabel">Change model</label>
-             <input type='text' placeholder='Change Model'
+            <label className="myLabel">Change model</label>
+             <input aria-label="Change Year" type='text' placeholder='Change Model'
                        onKeyPress={this.handleKeyPress3.bind(this)}
                 />
                 </div>   

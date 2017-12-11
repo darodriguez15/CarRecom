@@ -86,7 +86,7 @@ h1, h2
     white-space: pre-wrap;
 
 }
-#myLabel
+.myLabel
 {
 	padding-left: 50px;
 }
