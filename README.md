@@ -32,7 +32,7 @@ meteor test --driver-package meteortesting:mocha --port 3100
 
 ## Deployment
 
-Deployed in Heroku: 
+[Car Recommendations](https://carrecom.herokuapp.com)
 
 ## Built With
 
